@@ -1,0 +1,44 @@
+Q.1- What is Time Tuple?
+A time tuple is the usage of a tuple (list of ordered items/functions) for the ordering and notation of time.
+
+The tuple used for time in Python-based systems can be largely summarized as ordering by year (value of 1970 or higher), month (1 to 12), day (1 to 31), hour (0 to 23), minutes (0 to 59), seconds (0 to 59), day of the week (0 to 6, where 0 = Monday and 6 = Sunday), day of the year (1 to 366), and finally a DST (Daylight Savings Time) value of either -1 (“fall back”), 0 (“normal”), +1 (“spring forward”).
+-----------------------------------------------------------------------------------------------------------------------
+Q.2- Write a program to get formatted time.
+import datetime
+x= datetime.datetime.now()
+print(x)
+-----------------------------------------------------------------------------------------------------------------------
+Q.3- Extract month from the time.
+import datetime
+x= datetime.datetime.now()
+print(x.strftime("%B"))
+-------------------------------------------------------------------------------------------------------------------------
+ Q.4- Extract day from the time.
+import datetime
+x= datetime.datetime.now()
+print(x.strftime("%A"))
+-------------------------------------------------------------------------------------------------------------------------
+Q.5- Extract date (ex : 11 in 11/01/2021) from the time.
+import datetime
+x= datetime.datetime.now()
+print(x.strftime("%d"))
+--------------------------------------------------------------------------------------------------------------------------
+Q.6- Write a program to print time using localtime method.
+import time
+localtime = time.localtime(time.time())
+print ("Local current time :", localtime)
+--------------------------------------------------------------------------------------------------------------------------
+Q.7- Find the factorial of a number input by user using math package functions.
+import math
+x=int(input("factorial of"))
+print("factorial is",math.factorial(x))
+--------------------------------------------------------------------------------------------------------------------------
+Q.9- Use OS package and do the following tasks: 
+1. Get current working directory.
+2. Get the user environment.
+import os
+print(os.getcwd())
+import os
+print(os.environ)
+--------------------------------------------------------------------------------------------------------------------------
+

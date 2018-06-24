@@ -1,0 +1,39 @@
+Q.1- Take an input year from user and decide whether it is a leap year or not.
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+  print("The year is leap year")
+elif(): 
+  print("Not a leap year")
+------------------------------------------------------------------------------------------------------------------------
+Q.2- Take length and breadth input from user and check whether the dimensions are of square or rectangle. 
+x=int(input("Enter the length"))
+y=int(input("Enter the breadth"))
+if (x==y):
+  print("This is a square")
+elif(x!=y):
+  print("This is a rectangle")
+---------------------------------------------------------------------------------------------------------------------------
+Q.3- Take the input age of 3 people and determine oldest and youngest among them.
+x=int(input("Enter the age of first"))
+y=int(input("Enter the age of second"))
+z=int(input("Enter the age of third"))
+if ((x>y) and (x>z)):
+  print("X is the oldest")
+else:
+  print("X is younger")
+if((y>x) and (y>z)):
+  print("Y is oldest")
+elif(y<x and y<z):
+  print("Y is younger")
+if((z>x) and (z>y)):
+  print("z is oldest")
+elif(z<x and z<y):
+  print("z is younger")
+---------------------------------------------------------------------------------------------------------------------------
+**Q.5- A shop will give discount of 10% if the cost of purchased quantity is more than 1000.Ask user for quantity Suppose, one unit will cost 100. Judge and print total cost for user.
+print ("Enter quantity")
+quantity = int(input())
+if (quantity*100 > 1000):
+  print ("Cost is",((quantity*100)-(.1*quantity*100)))
+else:
+  print ("Cost is",quantity*100)

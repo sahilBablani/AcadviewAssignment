@@ -1,0 +1,44 @@
+# Q1. Create a threading process such that it sleeps for 5 seconds and then prints out a message.
+import threading
+import time
+import datetime 
+
+def iterate(name,delay):
+    for _ in range(3):
+        print(name,datetime.datetime.now())
+        time.sleep(delay)
+threading.Thread(target=iterate,args=("My Name is Sahil",5)).start()
+--------------------------------------------------------------------------------------------------------------------------
+Q2. Make a thread that prints numbers from 1-10, waits for 1 sec between
+import threading
+import time
+import datetime 
+from threading import Thread
+class Task(threading.Thread):
+    def run(self):
+        for i in range(0,11):
+            print("Number is",i)
+            i+=1
+            time.sleep(1)
+thread1=Task()
+thread1.start()
+--------------------------------------------------------------------------------------------------------------------------
+Q3. Make a list that has 5 elements.Create a threading process that prints the 5 elements of the list with a delay of multiple of 2 sec between each display.
+Delay goes like 2sec-4sec-6sec-8sec-10sec
+import threading
+import time
+import datetime 
+from threading import Thread
+list=[1,4,5,3,2]
+class Task(threading.Thread): 
+    def __init__(self,delay):
+        Thread.__init__(self)
+        self.delay=delay
+    def run(self):
+        for i in list:
+            print("Number is",i,datetime.datetime.now())
+            i+=1
+            self.delay+=2
+            time.sleep(self.delay)
+thread1=Task(2)
+thread1.start()

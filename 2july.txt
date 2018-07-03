@@ -1,0 +1,57 @@
+Q.1- Write a Python program to read last n lines of a file
+e=int(input("Enter which last lines to read"))
+f=open("abc.txt.txt",'r')
+data=f.readlines()
+length=len(data)-e
+for i in range(length,6):
+    print (data[i])
+f.close()
+-------------------------------------------------------------------------------------------------------------------------
+Q.3- Write a Python program to copy the contents of a file to another file.
+with open("abc.txt.txt",'r') as d:
+    with open("sho.txt",'w') as d1:
+        data=d.readlines()
+        for lines in data:
+            d1.writelines(lines)
+-------------------------------------------------------------------------------------------------------------------------
+Q.4- Write a Python program to combine each line from first file with the corresponding line in second file.
+with open("abc.txt.txt",'r') as d3:
+    with open("sho.txt",'r') as d1:
+        with open("show.txt",'w') as d2:
+            for i in range(2):
+                f=d3.readline()
+                f2=d1.readline()
+                d2.write(f)
+                d2.write(f2)
+
+---------------------------------------------------------------------------------------------------------------------------
+Q.5- Write a Python program to write 10 random numbers into a file. Read the file and then sort the numbers and then store it to another file.
+f=open("abc.txt.txt",'w')
+for i in range(10):
+    x=(input("Enter integers"))
+    f.write(x)
+    f.write("\n x")
+f.close()
+f1=open("abc.txt.txt",'r')
+data=f1.readlines()
+k=[]
+for j in range(10):
+    k.append((data[j]))
+k.sort()
+f2=open("abc.txt.txt",'w')
+f2.write("Sorted list")
+for i in k:
+    f2.write(str(i))
+    f2.write("\n")
+f2.close()
+f1.close()
+f.close()
+
+    
+
+
+
+    
+
+
+

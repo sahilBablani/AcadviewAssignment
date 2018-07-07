@@ -1,0 +1,32 @@
+Q.1 - Create a dataframe with your name , age , mail id and phone number and add your friends’s information to the same.
+import pandas as pd 
+import numpy as np
+context={'name':['Sahil'],'age':[21],'email-id':['sahilbablani08@gmail.com'],'phone_number':[9999251157]}
+df=pd.DataFrame(context)
+print("Data Frames are")
+print(df)
+df=df.append(pd.Series(['Ankita',21,np.nan,np.nan],index=['name','age','email-id','phone_number']),ignore_index=True)
+
+print("after append")
+print(df)
+--------------------------------------------------------------------------------------------------------------------------
+Import the data and print the following :
+a.) First 5 rows of Dataframe 
+b.) First 10 rows of the Dataframe 
+c.) find basic statistics on the particular dataset. 
+d.) Find the last 5 rows of the dataframe 
+e.) Extract the 2nd column and find basic statistics on it.
+import pandas as pd 
+import numpy as np
+file=pd.read_csv("weather.csv")
+print("The first five rows are")
+print(file.head())
+print("The first 10 rows are")
+print(file.head(10))
+print("Basic stats are")
+print(file.describe(include='all'))
+print("The last five rows are")
+print(file.tail())
+print("Basic stats of 2nd column are")
+print(file.describe(include='all').Location)
+--------------------------------------------------------------------------------------------------------------------------

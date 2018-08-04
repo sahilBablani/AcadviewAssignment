@@ -1,0 +1,32 @@
+Q.1 - Download the dataset from this link and solve all these questions, 
+Click Here
+a.) Find the sum of missing data for every column in the dataset using the (isnull function and sum function) 
+b.) Remove the missing values (if any) 
+c.) Once again , Import the dataset and this time replace the missing null values with mean of the column series. 
+d.) Find individual data types and copy the temperature column to a pandas series. 
+
+a)
+import pandas as pd
+import numpy as np
+file=pd.read_csv("weather.csv")
+print(file.isnull().sum(axis=1))
+-------------------------------------------------------------------------------------------------------------------------
+b)import pandas as pd
+import numpy as np
+file=pd.read_csv("weather.csv")
+file.dropna(how='any',inplace=True)
+print(file.isnull().sum())
+-------------------------------------------------------------------------------------------------------------------------
+c)import pandas as pd
+import numpy as np
+file=pd.read_csv("weather.csv")
+print(file.fillna(file.mean()))
+print(file.isnull().sum())
+-------------------------------------------------------------------------------------------------------------------------
+d)
+import pandas as pd
+import numpy as np
+file=pd.read_csv("weather.csv")
+print(file.dtypes)
+mintemp = pd.Series(file['MinTemp'],name='MinTemp')
+print(mintemp)

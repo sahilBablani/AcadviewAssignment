@@ -1,0 +1,40 @@
+QUES1= x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+Produce an ouput:-
+    [8, 9, 10, 11, 12]
+Do this by using slicing from the front (positive)
+Do this by using slicing from the back (negative)
+
+x=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+sliceobj= slice(7,12)
+sliceobj2=slice(-9,-4)
+print(x[sliceobj])
+print(x[sliceobj2])
+--------------------------------------------------------------------------------------------------------------------------
+QUES2=
+ x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+
+Print even number from x using list slicing only.
+
+Output should be like:-
+
+     [2, 4, 6, 8, 10, 12, 14, 16]
+x=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+sliceobj= slice(1,16,2)
+print(x[sliceobj])
+--------------------------------------------------------------------------------------------------------------------------
+QUES3=
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+
+Print every 4th number using list slicing only.
+
+
+Output should be like:-
+
+  [1, 5, 9, 13]
+x=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+sliceobj= slice(0,16,4)
+print(x[sliceobj])
+
+
